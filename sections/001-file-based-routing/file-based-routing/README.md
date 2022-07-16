@@ -1,34 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# File Based Routing
 
-## Getting Started
+## Why it's important
 
-First, run the development server:
+Plain and simple, Next.js allows the developer to create routing in a way that asks for no fuss or extra
+third party libraries (e.g. react-router). It requires no extra code outside of when using the Link component, which removes an entire step of getting the initial skeleton of the project set-up.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## What I learned in this Section
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Rendering a component at the base url ('/pages/index.js')
+- Rendering another page given a simple extra url path ('/pages/about.js')
+- Dynamic paths and nested page routes ('/pages/portfolio')
+- Catch-all routes ('/pages/blog')
+- Nested dynamic paths, useRouter and programatic navigation ('/pages/clients')
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Credit goes to Maximilian Schwarzmuller's Udemy course ["Next.js & React - The Complete Guide"](https://www.udemy.com/share/104coM3@pGgssWaMY2gLx2vIPm8UH0E0NBGERwYVmvjCTz5Yc_5r_jDYCgQYGcCFTkIUDClHbA==/) for my learning of this content

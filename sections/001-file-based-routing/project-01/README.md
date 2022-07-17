@@ -1,34 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# File Based Routing Project - Events Page
 
-## Getting Started
+## Overview
 
-First, run the development server:
+A barebones website with dummy data simulating a site for seeing coding events. The purpose of the project is to get familiar with working with routes and components, but Max also introduces the concept of CSS Modules and some other Next JS tips. Creating components in Next.JS is distinct from React in that the file conventions of Next.JS require you to keep components in a separate directory from pages. 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+While I'm not unfamiliar with CSS Modules, it's a good refresher. It's no surprise they're supported by Next.js by default, as they're an easy way to manage styling in a a production-scale app with a large amount of components. Each CSS module only pertains to the ones that it is imported and used in, and each class name gets overriden to be unique to a component in the background. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## What I learned in this Project
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Where to place components ('/components')
+- CSS Modules (various files)
+- Rendering fetched data (albeit, fake data in this project) (various files)
+- Styling a Link component with a class name ('components/ui/Button.js')
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Credit goes to Maximilian Schwarzmuller's Udemy course ["Next.js & React - The Complete Guide"](https://www.udemy.com/share/104coM3@pGgssWaMY2gLx2vIPm8UH0E0NBGERwYVmvjCTz5Yc_5r_jDYCgQYGcCFTkIUDClHbA==/) for my learning of this content

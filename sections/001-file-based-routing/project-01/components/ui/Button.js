@@ -16,3 +16,10 @@ export default function Button(props) {
     </button>
   );
 }
+
+/* Notes:
+- In order to style next.js Link components, you must nest the children of the Link component inside an <a>
+tag, then add the class to that <a> tag instead. The Link will still work as a normal Next.js would,
+but the <a> tag is necessary for styling purposes.
+
+*/

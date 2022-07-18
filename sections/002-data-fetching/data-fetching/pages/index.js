@@ -23,6 +23,8 @@ export async function getStaticProps() {
     props: {
       products: data.products,
     },
+    //After 10 seconds, re-generate data
+    revalidate: 10,
   };
 }
 
@@ -37,4 +39,17 @@ in may be anything.
 - The function must be exported/written as export async function getStaticProps() in order for Next to
 detect it.
 
+- getStaticProps() executes on build, but using ISR, a page may be set to regenerate on every request
+at most every X seconds. At X seconds, Next will generate, store (cache) and serve the newly generated page.
+
+- This doesn't mean necessarily that new data gets served to the page instantly after X seconds (something
+  that's normally achieved through another technology like web sockets.) It means that after X seconds,
+  a new regenerated page with updated data will be ready to be shown when the user refreshes.
+
+- note- in dev, Next will *always* regenerate for any request regardless of the revalidate property 
+  in getStaticProps
+
+  -ISR => Incremental Static Regeneration
+
+  - getStaticProps() runs ON the server. It never runs on the client.
 */

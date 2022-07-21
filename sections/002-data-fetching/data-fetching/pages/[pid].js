@@ -4,6 +4,13 @@ import fs from "fs/promises";
 export default function ProductDetail(props) {
   const { product } = props;
 
+  if (!product) {
+    return (
+      <div>
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
   return (
     <>
       <h1>{product.title}</h1>
@@ -18,6 +25,11 @@ export async function getStaticProps(context) {
   const product = data.products.find(
     (product) => product.id === context.params.pid
   );
+
+  // this plus fallback: true ensures to display a 404 page if the product doesn't exist
+  if (!product) {
+    return { notFound: true };
+  }
 
   //
   return {
@@ -48,7 +60,7 @@ export async function getStaticPaths() {
 
   return {
     paths: paths,
-    fallback: false,
+    fallback: true,
   };
 }
 

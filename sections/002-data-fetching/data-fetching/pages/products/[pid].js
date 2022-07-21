@@ -31,7 +31,6 @@ export async function getStaticProps(context) {
     return { notFound: true };
   }
 
-  //
   return {
     props: {
       product: product,

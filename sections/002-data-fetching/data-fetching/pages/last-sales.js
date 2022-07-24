@@ -24,6 +24,9 @@ export default function LastSalesPage() {
       setSales(newSales);
     }
   }, [data]);
+
+  // OLD method of fetching data
+
   //   useEffect(() => {
   //     fetch(`https://nextjs-demo-8bed5-default-rtdb.firebaseio.com/sales.json`)
   //       .then((res) => res.json())

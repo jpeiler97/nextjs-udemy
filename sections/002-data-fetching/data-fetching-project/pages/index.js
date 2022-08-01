@@ -1,10 +1,13 @@
+import { getFeaturedEvents } from "../dummy-data";
 import EventList from "../components/events/event-list";
-import { getFeaturedEvents } from "../helpers/apiUtil";
+import { getAllEvents } from "../helpers/apiUtil";
 
-function HomePage(props) {
+function HomePage() {
+  const featuredEvents = getFeaturedEvents();
+
   return (
     <div>
-      <EventList items={props.featuredEvents} />
+      <EventList items={featuredEvents} />
     </div>
   );
 }

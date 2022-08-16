@@ -1,34 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Optimizing Next.JS
 
-## Getting Started
+## How Next.JS allows easy optimization for your app
 
-First, run the development server:
+This section was small but important. A big feature of Next.JS is its ability out of the box to optimize your app as needed. For one, it gives the ability to optimize metadata for individual pages (considering each page is its own HTML doc) using the Head component. The entire document can also be modified using \_document.js, and default metadata can be set up in \_app.js. Next.JS also allows the optimization of images using the Image component, in place of the img tag.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## What I learned in this Section
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Head tag ('./\_app.js', './events')
+- Modifying the document with \_document.js
+- Adding default Head data ('./index.js')
+- Image component for optimization ('../components/event-detail/event-logistics.js')
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Credit goes to Maximilian Schwarzmuller's Udemy course ["Next.js & React - The Complete Guide"](https://www.udemy.com/share/104coM3@pGgssWaMY2gLx2vIPm8UH0E0NBGERwYVmvjCTz5Yc_5r_jDYCgQYGcCFTkIUDClHbA==/) for my learning of this content

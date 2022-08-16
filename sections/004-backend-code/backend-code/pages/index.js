@@ -5,14 +5,24 @@ function HomePage() {
   const emailRef = useRef();
   const feedbackRef = useRef();
 
-  function submitHandler = (e) => {
+  function submitHandler(e) {
     e.preventDefault();
     const email = emailRef.current.value;
     const feedback = feedbackRef.current.value;
-
-    axios.post('localhost:3000/api/feedback', JSON.stringify({email, feedback})).then((res) => {
-      
+    const body = { email: email, feedback: feedback };
+    fetch("/api/feedback", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
     })
+      .then((res) => {
+        res.json();
+      })
+      .then((data) => {
+        console.log(data);
+      });
   }
 
   return (

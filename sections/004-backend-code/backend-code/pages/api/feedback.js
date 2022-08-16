@@ -1,5 +1,23 @@
+import fs from "fs";
+import path from "path";
+
 function handler(req, res) {
-  res.status(200).json({ message: "This works!" });
+  if (req.method === "POST") {
+    const { email, feedback } = req.body;
+
+    const newFeedback = {
+      id: new Date().toISOString(),
+      email: email,
+      feedback: feedback,
+    };
+
+    const filePath = path.join(process.cwd(), "data", "feedback.json");
+    const fileData = JSON.parse(fs.readFileSync(filePath));
+    const allData = [...fileData, newFeedback];
+    fs.writeFileSync(filePath, JSON.stringify(allData));
+
+    res.status(200).json({ message: "success!", feedback: newFeedback });
+  }
 }
 
 export default handler;
